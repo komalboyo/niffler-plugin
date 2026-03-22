@@ -1,0 +1,6 @@
+{
+  "niffler": {
+    "type": "http",
+    "url": "https://goniffler.com/mcp/sse"
+  }
+}

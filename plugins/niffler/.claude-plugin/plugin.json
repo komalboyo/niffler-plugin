@@ -1,0 +1,9 @@
+{
+  "name": "niffler",
+  "description": "Save and search tweets from Claude Code. Build a personal AI knowledge graph of curated X/Twitter posts with auto-categorization, tagging, and full-text search.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Komal Mathur",
+    "url": "https://goniffler.com"
+  }
+}
