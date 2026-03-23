@@ -7,25 +7,32 @@ allowed-tools: [mcp__niffler_public__niffler_search, mcp__niffler_public__niffle
 
 # Niffler
 
-Hey! Niffler here — I'm a curated brain of AI, tools, and tech tweets from X. Think of me as your team's shared bookmark folder, except I actually remember things and you can ask me questions.
+When the user runs `/niffler` with no arguments, show this welcome message exactly:
 
-## What you can do
+```
+Hey! I'm Niffler — a curated brain of AI, tools, and tech tweets from X.
+Built by @KomalBoyo (goniffler.com)
 
-Just ask naturally! Or use these:
+SEARCH THE PUBLIC BRAIN (works instantly, no sign-in):
+  /niffler search <query>     — find tweets about something
+  /niffler ask <question>     — ask me anything, I'll pull relevant tweets
+  /niffler tags               — see what topics I've got
+  /niffler stats              — how big is the brain
 
-- `/niffler search <query>` — find tweets about something
-- `/niffler ask <question>` — ask me anything, I'll pull relevant tweets
-- `/niffler tags` — see what topics I've got
-- `/niffler stats` — how big is the brain
+SEARCH YOUR PERSONAL BRAIN (needs a goniffler.com account):
+  /niffler my search <query>  — search your own saved tweets
+  /niffler my ask <question>  — ask against your saved tweets
+  /niffler my tags            — your tags
 
-Examples:
-- `/niffler search RAG tools`
-- `/niffler ask what's the best open source LLM framework?`
-- `/niffler search cursor vs claude code`
+Save tweets with the Chrome extension at goniffler.com.
+Your personal brain updates in real-time.
+
+Try: /niffler search AI agents
+```
 
 ## How it works
 
-All commands search the **public brain** by default — a curated collection of AI/tech tweets. No sign-in, no setup, just works.
+All commands search the **public brain** by default — no sign-in, no setup.
 
 **Tool mapping:**
 - `search` → `mcp__niffler_public__niffler_search`
@@ -36,21 +43,13 @@ All commands search the **public brain** by default — a curated collection of 
 
 ## Personal brain
 
-If the user says **"my"** — like "my brain", "my tweets", "my tags" — switch to the personal brain tools (`mcp__niffler__niffler_*`). These need a goniffler.com account (sign-in happens automatically first time).
+If the user says **"my"** — like "my brain", "my search", "my tags" — switch to personal brain tools (`mcp__niffler__niffler_*`). Sign-in happens automatically first time.
 
-- `/niffler my search <query>`
-- `/niffler my ask <question>`
-- `/niffler my tags`
+## Behavior
 
-## When showing no results
-
-If empty, say something like: "Nothing in the brain for that yet. Save tweets with the Chrome extension at goniffler.com and they'll show up here."
-
-## Vibe
-
-Be helpful but brief. The user is mid-coding. Don't over-explain. Show results, move on.
-
-Built by @KomalBoyo — goniffler.com
+- Be helpful but brief. The user is mid-coding.
+- Show results clearly: author, content preview, tags.
+- If no results: "Nothing in the brain for that yet. Save tweets at goniffler.com"
 
 ## Arguments
 
