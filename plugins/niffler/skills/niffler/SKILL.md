@@ -1,37 +1,38 @@
 ---
 name: niffler
-description: Search your Niffler knowledge graph or the public brain — find tweets, list tags, get stats, ask questions
-argument-hint: <search|tags|stats|ask|public> [args...]
-allowed-tools: [mcp__niffler__niffler_search, mcp__niffler__niffler_list_by_tag, mcp__niffler__niffler_tags, mcp__niffler__niffler_get_post, mcp__niffler__niffler_stats, mcp__niffler__niffler_ask, mcp__niffler_public__niffler_search, mcp__niffler_public__niffler_list_by_tag, mcp__niffler_public__niffler_tags, mcp__niffler_public__niffler_get_post, mcp__niffler_public__niffler_stats, mcp__niffler_public__niffler_ask]
+description: Search a curated collection of AI/tech tweets — find tools, papers, projects, and ideas from X/Twitter
+argument-hint: <search|tags|stats|ask> [args...]
+allowed-tools: [mcp__niffler_public__niffler_search, mcp__niffler_public__niffler_list_by_tag, mcp__niffler_public__niffler_tags, mcp__niffler_public__niffler_get_post, mcp__niffler_public__niffler_stats, mcp__niffler_public__niffler_ask, mcp__niffler__niffler_search, mcp__niffler__niffler_list_by_tag, mcp__niffler__niffler_tags, mcp__niffler__niffler_get_post, mcp__niffler__niffler_stats, mcp__niffler__niffler_ask]
 ---
 
-# Niffler — Knowledge Graph for X/Twitter
+# Niffler — AI/Tech Tweet Search
 
-You are helping the user search and explore Niffler brains. There are two brains available:
-
-- **Personal brain** (`niffler` tools) — the user's own saved tweets. Requires sign-in (happens automatically on first use).
-- **Public brain** (`niffler-public` tools) — a curated collection of AI/tech tweets. No sign-in needed.
+Search a curated collection of AI, tools, and tech tweets from X/Twitter. No sign-in needed — works immediately.
 
 ## Commands
 
-Parse the user's intent from their arguments:
+- `/niffler search <query>` — Search tweets. Use `mcp__niffler_public__niffler_search`.
+- `/niffler ask <question>` — Ask a question, get answers from saved tweets. Use `mcp__niffler_public__niffler_ask`.
+- `/niffler tags` — List all tags. Use `mcp__niffler_public__niffler_tags`.
+- `/niffler stats` — Brain overview. Use `mcp__niffler_public__niffler_stats`.
+- `/niffler <anything>` — If it's a question use `niffler_ask`, otherwise `niffler_search`.
 
-- `/niffler search <query>` — Search personal brain. Use `mcp__niffler__niffler_search`.
-- `/niffler tags` — List personal tags. Use `mcp__niffler__niffler_tags`.
-- `/niffler stats` — Personal brain stats. Use `mcp__niffler__niffler_stats`.
-- `/niffler ask <question>` — Ask against personal brain. Use `mcp__niffler__niffler_ask`.
-- `/niffler public search <query>` — Search the public brain. Use `mcp__niffler_public__niffler_search`.
-- `/niffler public tags` — Public brain tags. Use `mcp__niffler_public__niffler_tags`.
-- `/niffler public ask <question>` — Ask against the public brain. Use `mcp__niffler_public__niffler_ask`.
-- `/niffler <anything>` — Default to personal brain. If it's a question, use `niffler_ask`; otherwise `niffler_search`.
+All commands above use the **public brain** by default.
+
+## Personal Brain
+
+If the user says "my brain", "my tweets", "personal", or "mine" — use the personal brain tools (`mcp__niffler__niffler_*`) instead. These require sign-in (happens automatically on first use).
+
+- `/niffler my search <query>` — Search personal brain.
+- `/niffler my tags` — Personal tags.
+- `/niffler my ask <question>` — Ask against personal brain.
 
 ## Behavior
 
-- Default to **personal brain** unless the user says "public" or "public brain".
+- **Default to the public brain** — no sign-in friction, works for everyone.
 - Present results clearly with author, content preview, and tags.
 - Be concise. The user is working in their terminal.
-- If no arguments are given, show available commands for both brains.
-- To save tweets, tell the user to use the Chrome extension or goniffler.com.
+- To save tweets to a personal brain, tell the user to sign up at goniffler.com and install the Chrome extension.
 
 ## Arguments
 
