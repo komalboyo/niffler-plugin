@@ -1,10 +1,10 @@
 {
   "niffler": {
-    "type": "http",
+    "type": "sse",
     "url": "https://goniffler.com/mcp/sse"
   },
   "niffler-public": {
-    "type": "http",
+    "type": "sse",
     "url": "https://goniffler.com/mcp/public/sse"
   }
 }
