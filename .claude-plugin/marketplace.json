@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "niffler-plugin",
+  "description": "Niffler — search your X/Twitter knowledge graph and the public brain from Claude Code",
+  "owner": {
+    "name": "Komal Mathur",
+    "url": "https://goniffler.com"
+  },
+  "plugins": [
+    {
+      "name": "niffler",
+      "description": "Search your personal X/Twitter knowledge graph and the public brain. Save tweets via the Chrome extension, query them from Claude Code.",
+      "source": "./plugins/niffler",
+      "category": "productivity",
+      "homepage": "https://goniffler.com"
+    }
+  ]
+}
