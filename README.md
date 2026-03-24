@@ -41,6 +41,8 @@ A curated collection of AI/tech tweets. No sign-in needed — works immediately:
 3. **Query from Claude Code** — search, ask questions, browse by tags
 4. New tweets you save are instantly available here — no sync needed
 
+> **Your X account stays safe.** Niffler doesn't call Twitter's internal APIs or use your session cookies for automated requests. The Chrome extension reads the page you're already on. The server uses Twitter's official oEmbed API. No ban risk.
+
 ## Tools
 
 **Personal brain** (`/niffler`):
